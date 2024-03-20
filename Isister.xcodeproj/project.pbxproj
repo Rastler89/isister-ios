@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		2C45C5892BAA176E00F353DF /* IsisterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5882BAA176E00F353DF /* IsisterApp.swift */; };
-		2C45C58B2BAA176E00F353DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C58A2BAA176E00F353DF /* ContentView.swift */; };
+		2C45C58B2BAA176E00F353DF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C58A2BAA176E00F353DF /* LoginView.swift */; };
 		2C45C58D2BAA177000F353DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C45C58C2BAA177000F353DF /* Assets.xcassets */; };
 		2C45C5902BAA177000F353DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C45C58F2BAA177000F353DF /* Preview Assets.xcassets */; };
-		2C45C5922BAA177000F353DF /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5912BAA177000F353DF /* Persistence.swift */; };
 		2C45C5952BAA177100F353DF /* Isister.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5932BAA177100F353DF /* Isister.xcdatamodeld */; };
+		2C45C59C2BAA19AD00F353DF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C59B2BAA19AD00F353DF /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C45C5852BAA176E00F353DF /* Isister.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Isister.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C45C5882BAA176E00F353DF /* IsisterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsisterApp.swift; sourceTree = "<group>"; };
-		2C45C58A2BAA176E00F353DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C45C58A2BAA176E00F353DF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2C45C58C2BAA177000F353DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C45C58F2BAA177000F353DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2C45C5912BAA177000F353DF /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2C45C5942BAA177100F353DF /* Isister.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Isister.xcdatamodel; sourceTree = "<group>"; };
+		2C45C59B2BAA19AD00F353DF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +55,9 @@
 		2C45C5872BAA176E00F353DF /* Isister */ = {
 			isa = PBXGroup;
 			children = (
+				2C45C59D2BAA19E300F353DF /* View */,
 				2C45C5882BAA176E00F353DF /* IsisterApp.swift */,
-				2C45C58A2BAA176E00F353DF /* ContentView.swift */,
 				2C45C58C2BAA177000F353DF /* Assets.xcassets */,
-				2C45C5912BAA177000F353DF /* Persistence.swift */,
 				2C45C5932BAA177100F353DF /* Isister.xcdatamodeld */,
 				2C45C58E2BAA177000F353DF /* Preview Content */,
 			);
@@ -71,6 +70,15 @@
 				2C45C58F2BAA177000F353DF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C45C59D2BAA19E300F353DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C45C58A2BAA176E00F353DF /* LoginView.swift */,
+				2C45C59B2BAA19AD00F353DF /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,9 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C45C5922BAA177000F353DF /* Persistence.swift in Sources */,
-				2C45C58B2BAA176E00F353DF /* ContentView.swift in Sources */,
+				2C45C58B2BAA176E00F353DF /* LoginView.swift in Sources */,
 				2C45C5892BAA176E00F353DF /* IsisterApp.swift in Sources */,
+				2C45C59C2BAA19AD00F353DF /* HomeView.swift in Sources */,
 				2C45C5952BAA177100F353DF /* Isister.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
