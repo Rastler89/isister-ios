@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Isister
+
+  Created by Daniel Molina on 20/3/24.
+  
+*/
+"Login.title" = "Login";
+"Login.user" = "Email";
+"Login.password" = "Password";
+"Login.button" = "SignIn";
