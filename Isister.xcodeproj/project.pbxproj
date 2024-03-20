@@ -14,6 +14,10 @@
 		2C45C5952BAA177100F353DF /* Isister.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5932BAA177100F353DF /* Isister.xcdatamodeld */; };
 		2C45C59C2BAA19AD00F353DF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C59B2BAA19AD00F353DF /* HomeView.swift */; };
 		2C45C5B42BAB5F1700F353DF /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C45C5B62BAB5F1700F353DF /* Localizable.strings */; };
+		2C45C5BB2BAB601900F353DF /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5BA2BAB601900F353DF /* Auth.swift */; };
+		2C45C5BD2BAB602900F353DF /* NewAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5BC2BAB602900F353DF /* NewAuth.swift */; };
+		2C45C5BF2BAB603900F353DF /* IsisterServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5BE2BAB603900F353DF /* IsisterServer.swift */; };
+		2C45C5C22BAB617C00F353DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2C45C5C12BAB617C00F353DF /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,9 @@
 		2C45C59B2BAA19AD00F353DF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2C45C5B52BAB5F1700F353DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C45C5B72BAB5F1B00F353DF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C45C5BA2BAB601900F353DF /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		2C45C5BC2BAB602900F353DF /* NewAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAuth.swift; sourceTree = "<group>"; };
+		2C45C5BE2BAB603900F353DF /* IsisterServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsisterServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C45C5C22BAB617C00F353DF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +66,7 @@
 		2C45C5872BAA176E00F353DF /* Isister */ = {
 			isa = PBXGroup;
 			children = (
+				2C45C5B82BAB5FE900F353DF /* Network */,
 				2C45C59D2BAA19E300F353DF /* View */,
 				2C45C5882BAA176E00F353DF /* IsisterApp.swift */,
 				2C45C58C2BAA177000F353DF /* Assets.xcassets */,
@@ -85,6 +94,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2C45C5B82BAB5FE900F353DF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				2C45C5B92BAB5FF600F353DF /* Data */,
+				2C45C5BE2BAB603900F353DF /* IsisterServer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2C45C5B92BAB5FF600F353DF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2C45C5BA2BAB601900F353DF /* Auth.swift */,
+				2C45C5BC2BAB602900F353DF /* NewAuth.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -101,6 +128,9 @@
 			dependencies = (
 			);
 			name = Isister;
+			packageProductDependencies = (
+				2C45C5C12BAB617C00F353DF /* Alamofire */,
+			);
 			productName = Isister;
 			productReference = 2C45C5852BAA176E00F353DF /* Isister.app */;
 			productType = "com.apple.product-type.application";
@@ -130,6 +160,9 @@
 				es,
 			);
 			mainGroup = 2C45C57C2BAA176E00F353DF;
+			packageReferences = (
+				2C45C5C02BAB617C00F353DF /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 2C45C5862BAA176E00F353DF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,10 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C45C5BD2BAB602900F353DF /* NewAuth.swift in Sources */,
+				2C45C5BB2BAB601900F353DF /* Auth.swift in Sources */,
 				2C45C58B2BAA176E00F353DF /* LoginView.swift in Sources */,
 				2C45C5892BAA176E00F353DF /* IsisterApp.swift in Sources */,
 				2C45C59C2BAA19AD00F353DF /* HomeView.swift in Sources */,
 				2C45C5952BAA177100F353DF /* Isister.xcdatamodeld in Sources */,
+				2C45C5BF2BAB603900F353DF /* IsisterServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +411,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C45C5C02BAB617C00F353DF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C45C5C12BAB617C00F353DF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C45C5C02BAB617C00F353DF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2C45C5932BAA177100F353DF /* Isister.xcdatamodeld */ = {

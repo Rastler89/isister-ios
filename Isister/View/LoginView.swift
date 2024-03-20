@@ -63,7 +63,7 @@ struct LoginView: View {
                         }
                     }
                     Button("Login.button") {
-                        //authenticateUser(username: username, password: password)
+                        authenticateUser(username: username, password: password)
                     }
                     .foregroundColor(.white)
                     .frame(width:300,height:50)
@@ -109,6 +109,20 @@ struct LoginView: View {
             }
         }
     }*/
+    func authenticateUser(username: String, password: String) {
+
+        IsisterServer.shared.authentication(username, password) {
+            (auth) in
+            print(auth)
+            
+            showingLoginScreen = true
+            
+        } failure: {
+            (error) in
+                print(error)
+            showingLoginScreen = false
+        }
+    }
 }
 
 /*
@@ -119,8 +133,8 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()*/
 
-struct ContentView_Previews: PreviewProvider {
+/*struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()//.environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
-}
+}*/
