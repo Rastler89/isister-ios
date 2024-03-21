@@ -9,19 +9,18 @@ import SwiftUI
 
 @main
 struct IsisterApp: App {
-    //let persistenceController = PersistenceController.shared
+    @StateObject private var manager: DataManager = DataManager()
 
     var body: some Scene {
         WindowGroup {
-            ControlView()
+            ControlView().environmentObject(manager)
+                .environment(\.managedObjectContext, manager.container.viewContext)
         }
     }
 }
 
 struct ControlView: View {
     
-    //@State private var hasCredentials = DataManager.shared.hasCredentials()
-    //@StateObject private var manager: DataManager = DataManager()
     var hasCredentials: Bool = false
     var body: some View {
         if !hasCredentials {

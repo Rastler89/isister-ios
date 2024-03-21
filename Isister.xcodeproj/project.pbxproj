@@ -18,6 +18,9 @@
 		2C45C5BD2BAB602900F353DF /* NewAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5BC2BAB602900F353DF /* NewAuth.swift */; };
 		2C45C5BF2BAB603900F353DF /* IsisterServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5BE2BAB603900F353DF /* IsisterServer.swift */; };
 		2C45C5C22BAB617C00F353DF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2C45C5C12BAB617C00F353DF /* Alamofire */; };
+		2C45C5C52BACA83A00F353DF /* Credential+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5C32BACA83A00F353DF /* Credential+CoreDataClass.swift */; };
+		2C45C5C62BACA83A00F353DF /* Credential+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5C42BACA83A00F353DF /* Credential+CoreDataProperties.swift */; };
+		2C45C5C82BACA8BB00F353DF /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C45C5C72BACA8BB00F353DF /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		2C45C5BA2BAB601900F353DF /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		2C45C5BC2BAB602900F353DF /* NewAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAuth.swift; sourceTree = "<group>"; };
 		2C45C5BE2BAB603900F353DF /* IsisterServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsisterServer.swift; sourceTree = "<group>"; };
+		2C45C5C32BACA83A00F353DF /* Credential+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Credential+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2C45C5C42BACA83A00F353DF /* Credential+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Credential+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2C45C5C72BACA8BB00F353DF /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,8 @@
 		2C45C57C2BAA176E00F353DF = {
 			isa = PBXGroup;
 			children = (
+				2C45C5C32BACA83A00F353DF /* Credential+CoreDataClass.swift */,
+				2C45C5C42BACA83A00F353DF /* Credential+CoreDataProperties.swift */,
 				2C45C5872BAA176E00F353DF /* Isister */,
 				2C45C5862BAA176E00F353DF /* Products */,
 			);
@@ -73,6 +81,7 @@
 				2C45C5932BAA177100F353DF /* Isister.xcdatamodeld */,
 				2C45C58E2BAA177000F353DF /* Preview Content */,
 				2C45C5B62BAB5F1700F353DF /* Localizable.strings */,
+				2C45C5C72BACA8BB00F353DF /* DataManager.swift */,
 			);
 			path = Isister;
 			sourceTree = "<group>";
@@ -190,6 +199,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C45C5C62BACA83A00F353DF /* Credential+CoreDataProperties.swift in Sources */,
+				2C45C5C82BACA8BB00F353DF /* DataManager.swift in Sources */,
+				2C45C5C52BACA83A00F353DF /* Credential+CoreDataClass.swift in Sources */,
 				2C45C5BD2BAB602900F353DF /* NewAuth.swift in Sources */,
 				2C45C5BB2BAB601900F353DF /* Auth.swift in Sources */,
 				2C45C58B2BAA176E00F353DF /* LoginView.swift in Sources */,

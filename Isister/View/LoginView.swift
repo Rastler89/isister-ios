@@ -10,18 +10,15 @@ import SwiftUI
 
 struct LoginView: View {
     
+    @EnvironmentObject var manager: DataManager
+    @Environment(\.managedObjectContext) var viewContext
+    
     @State private var username = ""
     @State private var password = ""
     @State private var wrongUsername = 0
     @State private var wrongPassword = 0
     @State private var showingLoginScreen = false
     @State private var isSecured: Bool = true
-    /*@Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>*/
 
     var body: some View {
         NavigationView {
@@ -79,41 +76,24 @@ struct LoginView: View {
         .navigationBarHidden(true)
     }
 
-    /*private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }*/
     func authenticateUser(username: String, password: String) {
 
         IsisterServer.shared.authentication(username, password) {
             (auth) in
             print(auth)
+            
+            var newCredential = Credential(context: self.viewContext)
+            newCredential.access_token = auth.access_token
+            newCredential.expires_in = Int64(auth.expires_in ?? 0)
+            newCredential.refresh_token = auth.refresh_token
+            newCredential.token_type = auth.token_type
+            
+            do {
+                try self.viewContext.save()
+                print("Todo saved!")
+            } catch {
+                print("whoops \\(error.localizedDescription)")
+            }
             
             showingLoginScreen = true
             
